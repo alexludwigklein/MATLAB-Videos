@@ -3,7 +3,7 @@ Collection of classes, functions and scripts to analyse movies in MATLAB includi
 
 ## Installation
 Add the parent directory that holds all @-folders to you local MATLAB path. This task can easily be done
-	with MATLAB's addpath and genpath functions. The code requires the following toolboxes to be installed 
+	with MATLAB's `addpath` and `genpath` functions. The code requires the following toolboxes to be installed 
 	(depending on the features used in the GUI):
 
 * Optimization Toolbox
@@ -24,8 +24,7 @@ Furthermore, the code makes use of some additional third party tools that can be
 The class to start with as a user is the `Video` class by opening a video. The actual data handling is performed
 by the class `Videomap` and supports MJ2, AVI, MP4, multistack TIF or its own binary format DAT (an uncompressed
 binary format to efficiently memory map huge data files). To view one or multiple movies, manually track objects, export the movies in a spatially referenced view (export to movies with transparent background is supported with 
-the help of FFMPEG) and much more, use the `Videoplayer` class. Here is a very short example:
-
+the help of FFMPEG, have a look at [Laser impact on a drop](https://www.youtube.com/watch?v=s4ITzfOLAGA) for an example) and much more, use the `Videoplayer` class. Here is a very short example:
 ```
 % open two videos and set a pixel resolution
 vid    		  = Video({'demo_traffic-rgb.mj2','demo_traffic-gray.mj2'});

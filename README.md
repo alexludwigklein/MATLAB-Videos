@@ -32,4 +32,10 @@ vid(1).pixres = 0.1;
 vid(2).pixres = vid(1).pixres;
 % and show them in the Videoplayer
 player  = vid.play;
+% get all channels of frame 5 of video 1
+img = vid(1).cdata(:,:,:,5);
+% apply a rotation to the data
+vid(1).transform = @(x) imrotate(x,45);
+% index into the rotated image (data is not changed on disk)
+img = vid(1).cdata(:,:,:,5);
 ```
